@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58509540268FE06300F56C4F /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5850953F268FE06300F56C4F /* NewsTableViewController.swift */; };
+		58509542268FED1200F56C4F /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58509541268FED1200F56C4F /* NewsTableViewCell.swift */; };
+		58509544269193A000F56C4F /* RSSItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58509543269193A000F56C4F /* RSSItem.swift */; };
+		585095462691957C00F56C4F /* FeedParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585095452691957C00F56C4F /* FeedParser.swift */; };
 		A5DEA40A267780890003FD33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DEA409267780890003FD33 /* AppDelegate.swift */; };
 		A5DEA40C267780890003FD33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DEA40B267780890003FD33 /* SceneDelegate.swift */; };
-		A5DEA40E267780890003FD33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DEA40D267780890003FD33 /* ViewController.swift */; };
 		A5DEA411267780890003FD33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5DEA40F267780890003FD33 /* Main.storyboard */; };
 		A5DEA4132677808C0003FD33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5DEA4122677808C0003FD33 /* Assets.xcassets */; };
 		A5DEA4162677808C0003FD33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5DEA4142677808C0003FD33 /* LaunchScreen.storyboard */; };
@@ -35,10 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5850953F268FE06300F56C4F /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		58509541268FED1200F56C4F /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		58509543269193A000F56C4F /* RSSItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSItem.swift; sourceTree = "<group>"; };
+		585095452691957C00F56C4F /* FeedParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedParser.swift; sourceTree = "<group>"; };
 		A5DEA406267780890003FD33 /* SimpleRSSReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleRSSReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5DEA409267780890003FD33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5DEA40B267780890003FD33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A5DEA40D267780890003FD33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A5DEA410267780890003FD33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5DEA4122677808C0003FD33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5DEA4152677808C0003FD33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,11 +107,14 @@
 			children = (
 				A5DEA409267780890003FD33 /* AppDelegate.swift */,
 				A5DEA40B267780890003FD33 /* SceneDelegate.swift */,
-				A5DEA40D267780890003FD33 /* ViewController.swift */,
 				A5DEA40F267780890003FD33 /* Main.storyboard */,
+				5850953F268FE06300F56C4F /* NewsTableViewController.swift */,
+				58509541268FED1200F56C4F /* NewsTableViewCell.swift */,
 				A5DEA4122677808C0003FD33 /* Assets.xcassets */,
 				A5DEA4142677808C0003FD33 /* LaunchScreen.storyboard */,
 				A5DEA4172677808C0003FD33 /* Info.plist */,
+				58509543269193A000F56C4F /* RSSItem.swift */,
+				585095452691957C00F56C4F /* FeedParser.swift */,
 			);
 			path = SimpleRSSReader;
 			sourceTree = "<group>";
@@ -258,9 +267,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5DEA40E267780890003FD33 /* ViewController.swift in Sources */,
+				585095462691957C00F56C4F /* FeedParser.swift in Sources */,
 				A5DEA40A267780890003FD33 /* AppDelegate.swift in Sources */,
+				58509544269193A000F56C4F /* RSSItem.swift in Sources */,
 				A5DEA40C267780890003FD33 /* SceneDelegate.swift in Sources */,
+				58509542268FED1200F56C4F /* NewsTableViewCell.swift in Sources */,
+				58509540268FE06300F56C4F /* NewsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
