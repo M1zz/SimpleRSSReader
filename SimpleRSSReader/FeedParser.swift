@@ -49,11 +49,11 @@ final class FeedParser: NSObject {
                 completed(.failure(.unableToComplete))
                 return
             }
-            
-            guard let response = response else {
-                completed(.failure(.invalidResponse))
-                return
-            }
+//            
+//            guard let response = response else {
+//                completed(.failure(.invalidResponse))
+//                return
+//            }
             
             guard let data = data else {
                 completed(.failure(.invalidData))
