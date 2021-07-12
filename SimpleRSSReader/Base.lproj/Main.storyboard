@@ -56,9 +56,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="DescriptionLabel" destination="KVY-wH-eBE" id="YTs-Hs-Iy9"/>
-                                    <outlet property="TitleLabel" destination="ENw-oJ-Cq9" id="h8F-Sh-Awg"/>
                                     <outlet property="dateLabel" destination="xY4-RI-v1b" id="rWm-MI-JyL"/>
+                                    <outlet property="descriptionLabel" destination="KVY-wH-eBE" id="YTs-Hs-Iy9"/>
+                                    <outlet property="titleLabel" destination="ENw-oJ-Cq9" id="h8F-Sh-Awg"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

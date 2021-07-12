@@ -5,9 +5,9 @@
 //  Created by hyunho lee on 2021/07/04.
 //
 
-import Foundation
+import UIKit
 
-struct RSSItem {
+struct RSSItem: Decodable {
     let title: String
     let description: String
     let pubDate: String

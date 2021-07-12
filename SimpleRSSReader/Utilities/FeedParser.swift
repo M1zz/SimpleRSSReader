@@ -7,15 +7,11 @@
 
 import Foundation
 
-enum RSSError: String, Error {
-    case invalidURL = "feed URL is invalid"
-    case unableToComplete = "요청을 완료할 수 없습니다. 네트워크 연결을 확인해주세요."
-    case invalidResponse = "유효하지 않은 서버로 부터의 응답입니다. 다시 요청해주세요."
-    case invalidData = "서버로 받은 데이터가 유효하지 않습니다. 다시 요청해주세요."
-}
+
 
 final class FeedParser: NSObject {
     
+    private var rssItems:[RSSItem] = []
     private var currentElement = ""
     
     private var currentTitle = "" {
@@ -63,6 +59,7 @@ final class FeedParser: NSObject {
             let parser = XMLParser(data: data)
             parser.delegate = self
             parser.parse()
+            completed(.success(self.rssItems))
         }).resume()
     }
 }
@@ -77,4 +74,26 @@ extension FeedParser: XMLParserDelegate {
             currentPubDate = ""
         }
     }
+    
+    func parser(_ parser: XMLParser, foundCharacters string: String) {
+        /// Note: current string may only contain part of info.
+        switch currentElement {
+        case "title":
+            currentTitle += string
+        case "description":
+            currentDescription += string
+        case "pubDate":
+            currentPubDate += string
+        default:
+            break
+        }
+    }
+    
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        if elementName == "item" {
+            let rssItem = RSSItem(title: currentTitle, description: currentDescription, pubDate: currentPubDate)
+            rssItems.append(rssItem)
+        }
+    }
+    
 }

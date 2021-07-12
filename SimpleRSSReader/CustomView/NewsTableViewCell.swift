@@ -7,11 +7,16 @@
 
 import UIKit
 
+enum CellState {
+    case expanded
+    case collapsed
+}
+
 class NewsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var TitleLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var DescriptionLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
